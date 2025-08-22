@@ -4,6 +4,16 @@ from sklearn.cluster import KMeans
 from PIL import Image
 
 
+def safe_open_rgba(uploaded_file):
+    img = Image.open(uploaded_file)
+    w, h = img.size
+    if (w * h) > 50_000_000:
+        scale = (w * h / 50_000_000) ** 0.5
+        new_size = (int(w / scale), int(h / scale))
+        img = img.resize(new_size, Image.LANCZOS)
+    return img
+    
+
 def make_palette(img, k):
     arr = np.asarray(img).reshape(-1, 3)
 
@@ -34,7 +44,7 @@ def make_palette(img, k):
         )
 
     return result
-
+    
 
 def make_palette_img(rgbs, swatch_size=64):
     k = len(rgbs)
@@ -50,6 +60,7 @@ def make_palette_img(rgbs, swatch_size=64):
         img.paste(swatch, (x0, 0))
 
     return img
+    
 
 @st.cache_data(show_spinner=False)
 def cached_palette(file_bytes, k):

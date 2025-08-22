@@ -52,8 +52,7 @@ if uploaded_file is not None:
         autopct="%1.1f%%",
         startangle=0,
         counterclock=True,
-        edgecolor='black',
-        linewidth=1.0
+        edgecolor="black",
     )
     ax.axis("equal")
     st.pyplot(fig)

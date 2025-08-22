@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from module import cached_extract, make_palette_img
+from module import cached_palette, make_palette_img
 from PIL import Image
 import io
 import const
@@ -23,7 +23,7 @@ if uploaded_file is not None:
         st.image(img, use_container_width=True)
     k = st.slider("抽出する色の数", min_value=3, max_value=7, value=5)
     with st.spinner("抽出中..."):
-        result = cached_extract(img, k)
+        result = cached_palette(img, k)
     hexes = [item["hex"] for item in result]
     rgbs = [item["rgb"] for item in result]
     ratios = np.array([item["ratio"] for item in result])

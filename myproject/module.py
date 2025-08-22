@@ -7,8 +7,8 @@ from PIL import Image
 def safe_open_rgba(uploaded_file):
     img = Image.open(uploaded_file)
     w, h = img.size
-    if (w * h) > 50_000_000:
-        scale = (w * h / 50_000_000) ** 0.5
+    if (w * h) > 5_000_000:
+        scale = (w * h / 5_000_000) ** 0.5
         new_size = (int(w / scale), int(h / scale))
         img = img.resize(new_size, Image.LANCZOS)
     return img

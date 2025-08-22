@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from module import cached_palette, make_palette_img
+from module import cached_palette, make_palette_img, safe_open_rgba
 from PIL import Image
 import io
 import const
@@ -18,7 +18,7 @@ uploaded_file = st.file_uploader(
 
 
 if uploaded_file is not None:
-    img = Image.open(uploaded_file).convert("RGB")
+    img = safe_open_rgba(uploaded_file).convert("RGB")
     with st.expander("画像プレビュー"):
         st.image(img, use_container_width=True)
     k = st.slider("抽出する色の数", min_value=3, max_value=7, value=5)

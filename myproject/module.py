@@ -1,4 +1,5 @@
 import numpy as np
+import streamlit as st
 from sklearn.cluster import KMeans
 from PIL import Image
 
@@ -49,3 +50,8 @@ def make_palette_img(rgbs, swatch_size=64):
         img.paste(swatch, (x0, 0))
 
     return img
+
+@st.cache_data(show_spinner=False)
+def cached_palette(file_bytes, k):
+    return make_palette(file_bytes, k)
+

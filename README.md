@@ -69,7 +69,7 @@ Create venv
 Install deps
 
 ```bash
-  poetry install -r requirements.txt
+  poetry install
 ```
 
 Start the server
@@ -99,4 +99,5 @@ Start the server
  - [Numpy](https://numpy.org/ja/)
  - [scikit-learn](https://scikit-learn.org/stable/)
  - [matplotlib](https://matplotlib.org)
+
 

@@ -43,7 +43,7 @@ https://color-palette-maker.streamlit.app
 ##### 1) 画像（PNG/JPG/JPEG）をアップロード
 ##### 2) スライダーでクラスタ数 k（3〜7）を指定
 ##### 3) 抽出された色と HEX/RGB、出現比率を確認
-##### 4) 画像/CSV のダウンロード
+##### 4) パレット画像 のダウンロード
 
 ## Run Locally
 
@@ -99,5 +99,6 @@ Start the server
  - [Numpy](https://numpy.org/ja/)
  - [scikit-learn](https://scikit-learn.org/stable/)
  - [matplotlib](https://matplotlib.org)
+
 
 

@@ -17,7 +17,7 @@ https://color-palette-maker.streamlit.app
 - [Acknowledgements](#-acknowledgements)
 ## Badges
 ![Made with Streamlit](https://img.shields.io/badge/Made%20with-Streamlit-FF4B4B.svg)
-![Python](https://img.shields.io/badge/python-%203.12-blue.svg)
+![Python](https://img.shields.io/badge/python-%203.12.3-blue.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
 ## Tech Stack
@@ -99,6 +99,7 @@ Start the server
  - [Numpy](https://numpy.org/ja/)
  - [scikit-learn](https://scikit-learn.org/stable/)
  - [matplotlib](https://matplotlib.org)
+
 
 
 

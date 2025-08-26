@@ -7,14 +7,7 @@
 
 https://color-palette-maker.streamlit.app
 
-## Table of Contents
-- [Tech Stack](#-tech-stack)
-- [Features](#-features)
-- [Usage](#-usage)
-- [Run Locally](#-run-locally)
-- [Deployment](#-deployment)
-- [License](#-license)
-- [Acknowledgements](#-acknowledgements)
+
 ## Badges
 ![Made with Streamlit](https://img.shields.io/badge/Made%20with-Streamlit-FF4B4B.svg)
 ![Python](https://img.shields.io/badge/python-%203.12.3-blue.svg)
@@ -36,7 +29,6 @@ https://color-palette-maker.streamlit.app
 - HEX / RGB 値の表示
 - 各色の出現比率（割合）の可視化
 - パレット画像のダウンロード
-- ブラウザだけで動作（Python + Streamlit）
 
 ## Usage
 
@@ -99,6 +91,7 @@ Start the server
  - [Numpy](https://numpy.org/ja/)
  - [scikit-learn](https://scikit-learn.org/stable/)
  - [matplotlib](https://matplotlib.org)
+
 
 
 
